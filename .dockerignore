@@ -1,0 +1,12 @@
+dist
+node_modules
+.elasticbeanstalk
+
+# Tests
+test
+
+# WebStorm configuration
+.idea
+
+# Repo information
+README.md
