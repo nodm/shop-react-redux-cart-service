@@ -1,10 +1,10 @@
 FROM node:16-alpine AS base
 WORKDIR /opt/shop-react-redux-cart-service
-COPY package*.json .
+COPY package*.json ./
 
 FROM base AS build
 RUN npm i
-COPY . .
+COPY . ./
 RUN npm run build
 
 FROM base AS dist
