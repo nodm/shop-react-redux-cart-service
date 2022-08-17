@@ -1,3 +1,27 @@
+## Module 08: Containerization (Docker and AWS Elastic Beanstalk)
+
+- [x] 1 - Dockerfile is prepared, image is building. Image size is minimized to be less than 500 MB.
+- [x] 2 - Dockerfile is optimized. Files that change more often and commands that depend on them should be included
+      later, files and commands that change less should be at the top.
+- [x] 3 - Folders are added to `.dockerignore`, with explanations. At least 2 big directories should be excluded from
+      build context. Elastic Beanstalk application is initialized.
+- [x] 4 - Environment is created and the app is deployed to the AWS Cloud. You must provide a link to your GitHub repo
+      with Cart Service API or PR with created Dockerfile and related configurations.
+- [x] 5 - FE application is updated with Cart API endpoint. You must provide a PR with updates in your FE repository and
+      OPTIONALLY link to deployed front-end app which makes proper API calls to your Cart Service.
+
+
+
+### Cloudfront
+* [PR](https://github.com/nodm/shop-react-redux-cloudfront/pull/5)
+* [Website on Cloudfront](https://d2oxj55y64zodz.cloudfront.net/cart)
+
+To make requests as an authorized customer (to import products from a CSV file):
+* generate an authorization token by running ```Buffer.from(`${userName}::${password}`).toString('base64')```
+  _(replace `userName` and `password` as described in the task)_.
+* create in the `localStorage` an item with the key `authorization_token` and generated on the previous step token as
+  the value (do not add `Basic ` at the beginning).
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
